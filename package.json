@@ -7,7 +7,7 @@
     "clean": "rm -rf ./dist",
     "build": "pnpm clean && tsup src/* --config 'tsup.config.dev.json'",
     "build-prod": "pnpm clean && tsup --minify",
-    "start-watch": "tsup src/* --config 'tsup.config.dev.json' --watch --onSuccess 'node dist/index.js'",
+    "start-watch": "pnpm clean && tsup src/* --config 'tsup.config.dev.json' --watch --onSuccess 'node dist/index.js'",
     "start": "pnpm clean && tsup src/* --config 'tsup.config.dev.json' --onSuccess 'node dist/index.js'",
     "start-prod": "pnpm clean && tsup --minify --onSuccess 'node dist/index.js'",
     "test": "vitest --run",

@@ -1,0 +1,31 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "vitest", "prettier"],
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "extends": [
+    "plugin:import/typescript",
+    "plugin:prettier/recommended",
+    "airbnb-base",
+    "airbnb-typescript/base"
+  ],
+  "rules": {
+    //"prettier/prettier": 2 // Means error
+    "no-console": 0,
+    "allowTemplateLiterals": true,
+    "avoidEscape": true
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2022": true,
+    "jest": true
+  }
+}

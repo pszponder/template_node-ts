@@ -59,7 +59,7 @@ Use the following command to run the scripts:
 
 ## References:
 
-This project was heavily influenced by the following 2 repositories:
-
 - [stemmlerjs/simple-typescript-starter](https://github.com/stemmlerjs/simple-typescript-starter)
 - [wesbos/eslint-config-wesbos](https://github.com/wesbos/eslint-config-wesbos)
+- [Matt Pocock - How to publish packages to npm in 2023](https://www.youtube.com/watch?v=eh89VE3Mk5g)
+- [Fireship - How to Setup Node.js with TypeScript in 2023](https://www.youtube.com/watch?v=H91aqUHn8sE)

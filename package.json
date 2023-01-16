@@ -19,7 +19,8 @@
     "check-all": "pnpm check-format && pnpm check-lint && pnpm check-types",
     "fix-format": "prettier --config .prettierrc 'src/**/*' --write",
     "fix-lint": "eslint --fix 'src/**/*'",
-    "fix-all": "pnpm fix-format && pnpm fix-lint && pnpm build"
+    "fix-all": "pnpm fix-format && pnpm fix-lint && pnpm build",
+    "prepare": "husky install"
   },
   "type": "module",
   "keywords": [],
@@ -36,6 +37,8 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vitest": "^0.0.29",
     "happy-dom": "^8.1.4",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.1.0",
     "nodemon": "^2.0.20",
     "prettier": "^2.8.3",
     "tsup": "^6.5.0",

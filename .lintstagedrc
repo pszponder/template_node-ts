@@ -1,0 +1,8 @@
+{
+    "src/**/*.{js,jsx,ts,tsx,html,css,scss}": [
+        "pnpm check-format",
+        "pnpm check-lint",
+        "pnpm check-types",
+        "pnpm test-related"
+    ]
+}

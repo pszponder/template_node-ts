@@ -19,7 +19,7 @@ This setup is configured using [`pnpm`](https://pnpm.io/). If you would like to 
 
 ### Option 1: Create a new GitHub repository using the template
 
-Click on the `Use this template` button to create a new GitHub repository which will use the `template_node-ts` as a started for the new repository
+Click on the `Use this template` button to create a new GitHub repository which will use the `template_node-ts` as a starter for the new repository
 
 ### Option 2: Clone the Project and Reset Git History
 

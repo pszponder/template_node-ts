@@ -15,7 +15,7 @@ This setup is configured using [`pnpm`](https://pnpm.io/). If you would like to 
 - Prettier Configuration for code formatting
 - Husky & lintstaged configuration for linting and testing code on commit
 
-## Usage:
+## Project Setup:
 
 ### Option 1: Create a new GitHub repository using the template
 
@@ -34,6 +34,14 @@ Use [degit](https://github.com/Rich-Harris/degit) to download the project templa
 ### Option 4: Using "Git Clone No History"
 
 I wrote an npm package which basically does the same as option 2. You can read more about `Git Clone No History` [here](https://www.npmjs.com/package/npm-git-clone-no-history)
+
+## Usage:
+
+This project is designed to work with TypeScript files.
+
+All of your source code should go into the `src` directory
+
+When you build or start the application using one of the appropriate commands (see the scripts section), the compiled code will be output to a `dist` folder.
 
 ## Scripts:
 

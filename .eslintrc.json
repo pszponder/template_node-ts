@@ -11,16 +11,16 @@
     "sourceType": "module"
   },
   "extends": [
-    "plugin:import/typescript",
-    "plugin:prettier/recommended",
     "airbnb-base",
-    "airbnb-typescript/base"
+    "airbnb-typescript/base",
+    "plugin:import/typescript",
+    "plugin:prettier/recommended"
   ],
   "rules": {
     //"prettier/prettier": 2 // Means error
     "no-console": 0,
-    "allowTemplateLiterals": true,
-    "avoidEscape": true
+    "allowTemplateLiterals": 0,
+    "avoidEscape": 0
   },
   "env": {
     "browser": true,

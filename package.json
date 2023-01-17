@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf ./dist",
-    "build": "pnpm clean && tsup src/* --config 'tsup.config.dev.json'",
+    "build": "pnpm clean && tsup",
     "build-prod": "pnpm clean && tsup --minify",
-    "start-watch": "pnpm clean && tsup src/* --config 'tsup.config.dev.json' --watch --onSuccess 'node dist/index.js'",
-    "start": "pnpm clean && tsup src/* --config 'tsup.config.dev.json' --onSuccess 'node dist/index.js'",
+    "start-watch": "pnpm clean && tsup --watch --onSuccess 'node dist/index.js'",
+    "start": "pnpm clean && tsup --onSuccess 'node dist/index.js'",
     "start-prod": "pnpm clean && tsup --minify --onSuccess 'node dist/index.js'",
     "test": "vitest --run",
     "test-related": "vitest --run related",

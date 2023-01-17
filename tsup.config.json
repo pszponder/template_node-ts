@@ -6,6 +6,6 @@
   "minify": false,
   "format": ["esm"],
   "treeshake": true,
-  "platform": "neutral",
+  "platform": "node",
   "bundle": true
 }

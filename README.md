@@ -50,10 +50,9 @@ Use the following command to run the scripts:
 
 - `clean`: Deletes the `dist` directory and all of its contents
 - `build`: `Rebuilds` the `build` directory and its contents
-- `build-prod`: Same as `build` but output code is minified and bundled
+- `build-prod`: Same as `build` but output code is minified and bundled, also build d.ts type files
 - `start`: Builds the project and runs compiled code from the `dist` directory
-- `start-watch`: Compiles code and executes it in watch mode. Any changes to code will cause code to recompile and re-run.
-- `start-prod`: Same as `start` except output code is minified and bundled
+- `watch`: Compiles code and executes it in watch mode. Any changes to code will cause code to recompile and re-run.
 - `test`: Runs all `...spec.ts` and `...test.ts` files using `Vitest`
 - `test-related`: Pass in space-separated file paths to files in the `src` directory you wish to run tests for
 - `test-watch`: Runs `Vitest` in "watch" mode (changes to test files cause `Vitest` to rerun them)

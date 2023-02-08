@@ -14,9 +14,7 @@
     "testing",
     "template",
     "eslint",
-    "prettier",
-    "husky",
-    "lint-staged"
+    "prettier"
   ],
   "devDependencies": {
     "@types/node": "^18.11.18",
@@ -29,8 +27,6 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vitest": "^0.0.29",
     "happy-dom": "^8.1.4",
-    "husky": "^8.0.0",
-    "lint-staged": "^13.1.0",
     "nodemon": "^2.0.20",
     "prettier": "^2.8.3",
     "tsup": "^6.5.0",
@@ -41,8 +37,8 @@
     "clean": "rm -rf ./dist",
     "build": "pnpm clean && tsup --sourcemap",
     "build-prod": "pnpm clean && tsup --minify --dts",
-    "watch": "tsup --sourcemap --watch --onSuccess \"node dist/index.js\"",
     "start": "tsup --sourcemap --onSuccess \"node dist/index.js\"",
+    "watch": "tsup --sourcemap --watch --onSuccess \"node dist/index.js\"",
     "test": "vitest --run",
     "test-related": "vitest --run related",
     "test-watch": "vitest",

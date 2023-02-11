@@ -41,13 +41,21 @@ This project is designed to work with TypeScript files.
 
 All of your source code should go into the `src` directory
 
-When you build or start the application using one of the appropriate commands (see the scripts section), the compiled code will be output to a `dist` folder.
+When you build or start the application using one of the appropriate commands (see the scripts section), the transpiled code will be output to a `dist` folder.
 
-## A note on lint-staged and Husky
+### A note on lint-staged and Husky
 
 I decided to remove lint-staged and Husky from the main branch.
 
 Instead, if you would like to see the implementation of the template using lint-staged and Husky, refer to the `with-husky` branch.
+
+### Testing and Code Snippets
+
+A `_scratch` directory can be found in under the `src` directory which contains a `scratch.ts` file. This file and directory are intended to be a place to play around with code and code snippets, or run some quick tests without needing to pollute your main source code.
+
+To run the `scratch.ts` file, you can use the `pnpm scratch` command. This will transpile and execute `scratch.js` in the `dist` directory.
+
+**_NOTE_**: Don't import any files from the `_scratch` directory into `index.ts` unless you want your source code to compile your scratch files as well.
 
 ## Scripts:
 
@@ -57,8 +65,8 @@ Use the following command to run the scripts:
 - `clean`: Deletes the `dist` directory and all of its contents
 - `build`: `Rebuilds` the `build` directory and its contents
 - `build-prod`: Same as `build` but output code is minified and bundled, also build d.ts type files
-- `start`: Builds the project and runs compiled code from the `dist` directory
-- `watch`: Compiles code and executes it in watch mode. Any changes to code will cause code to recompile and re-run.
+- `start`: Builds the project and runs transpiled code from the `dist` directory
+- `watch`: Transpiles code and executes it in watch mode. Any changes to code will cause code to re-transpile and re-run.
 - `test`: Runs all `...spec.ts` and `...test.ts` files using `Vitest`
 - `test-related`: Pass in space-separated file paths to files in the `src` directory you wish to run tests for
 - `test-watch`: Runs `Vitest` in "watch" mode (changes to test files cause `Vitest` to rerun them)
@@ -69,6 +77,7 @@ Use the following command to run the scripts:
 - `fix-format`: Fix all formatting errors in TS files in `src` directory
 - `fix-lint`: Fix all linting errors in TS files in `src` director
 - `fix-all`: Fix all formatting and linting errors & rebuild the project
+- `scratch`: Runs the transpiles and `scratch.ts` file located in the `src/_scratch` directory
 
 ## References:
 

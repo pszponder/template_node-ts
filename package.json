@@ -49,6 +49,6 @@
     "fix-format": "prettier --config .prettierrc 'src/**/*' --write",
     "fix-lint": "eslint --fix 'src/**/*'",
     "fix-all": "pnpm fix-format && pnpm fix-lint && pnpm build",
-    "prepare": "husky install"
+    "scratch": "pnpm clean && tsup src/_scratch/scratch.ts --onSuccess \"node dist/scratch.js\""
   }
 }

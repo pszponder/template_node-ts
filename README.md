@@ -24,8 +24,22 @@ Click on the `Use this template` button to create a new GitHub repository which 
 ### Option 2: Clone the Project and Reset Git History
 
 1. Download / Clone the repo.
-2. Remove the `.git` directory (ex. via `rm -rf .git`).
-3. Initialize a new `.git` directory (via `git init`).
+2. Rename the directory from template_node-ts to whatever you want
+3. Remove the `.git` directory (ex. via `rm -rf .git`).
+4. Initialize a new `.git` directory (via `git init`).
+
+```bash
+# Clone the repo
+git clone git@github.com:pszponder/template_node-ts.git
+
+# Rename directory
+mv template_node-ts <new-dir-name>
+
+# Move inside the new directory and clean / reset git
+cd <new-dir-name>
+rm -rf .git
+git init
+```
 
 ### Option 3: Using degit
 

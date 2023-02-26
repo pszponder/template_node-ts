@@ -20,7 +20,8 @@
     //"prettier/prettier": 2 // Means error
     "no-console": 0,
     "allowTemplateLiterals": 0,
-    "avoidEscape": 0
+    "avoidEscape": 0,
+    "import/prefer-default-export": 0
   },
   "env": {
     "browser": true,

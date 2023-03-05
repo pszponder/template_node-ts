@@ -71,6 +71,12 @@ To run the `scratch.ts` file, you can use the `pnpm scratch` command. This will 
 
 **_NOTE_**: Don't import any files from the `_scratch` directory into `index.ts` unless you want your source code to compile your scratch files as well.
 
+## Updating Dependencies
+
+```bash
+pnpm update
+```
+
 ## Scripts:
 
 Use the following command to run the scripts:

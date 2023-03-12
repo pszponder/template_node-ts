@@ -23,7 +23,10 @@
     "avoidEscape": 0,
     "import/prefer-default-export": 0,
     "no-redeclare": 0,
-    "@typescript-eslint/no-redeclare": 0  
+    "@typescript-eslint/no-redeclare": 0,
+    "@typescript-eslint/naming-convention": {
+      "leadingUnderscore": "allowSingleOrDouble"
+    }
   },
   "env": {
     "browser": true,

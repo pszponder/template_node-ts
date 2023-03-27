@@ -17,7 +17,7 @@
     "prettier"
   ],
   "dependencies": {
-     "tsup": "^6.6.3",
+     "tsup": "^6.6.3"
   },
   "devDependencies": {
     "@types/node": "^18.14.6",

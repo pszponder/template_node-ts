@@ -13,7 +13,6 @@ This setup is configured using [`pnpm`](https://pnpm.io/). If you would like to 
 - Uses ESModule Syntax for module `import` and `export`
 - ESLint Configuration extended for use in TypeScript using Airbnb recommendations
 - Prettier Configuration for code formatting
-- Husky & lintstaged configuration for linting and testing code on commit
 
 ## Project Setup:
 
@@ -56,12 +55,6 @@ This project is designed to work with TypeScript files.
 All of your source code should go into the `src` directory
 
 When you build or start the application using one of the appropriate commands (see the scripts section), the transpiled code will be output to a `dist` folder.
-
-### A note on lint-staged and Husky
-
-I decided to remove lint-staged and Husky from the main branch.
-
-Instead, if you would like to see the implementation of the template using lint-staged and Husky, refer to the `with-husky` branch.
 
 ### Testing and Code Snippets
 

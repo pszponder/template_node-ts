@@ -1,6 +1,6 @@
 {
   "name": "template_node-ts",
-  "version": "1.0.1",
+  "version": "0.0.1",
   "description": "Template for Node Project w/ TypeScript, ESLint, Prettier & Vitest",
   "main": "./dist/main.js",
   "type": "module",

@@ -62,7 +62,7 @@ A `_scratch` directory can be found in under the `src` directory which contains 
 
 To run the `scratch.ts` file, you can use the `pnpm scratch` command. This will transpile and execute `scratch.js` in the `dist` directory.
 
-**_NOTE_**: Don't import any files from the `_scratch` directory into `index.ts` unless you want your source code to compile your scratch files as well.
+**_NOTE_**: Don't import any files from the `_scratch` directory into `main.ts` unless you want your source code to compile your scratch files as well.
 
 ## Updating Dependencies
 

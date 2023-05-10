@@ -1,5 +1,5 @@
 {
-  "entry": ["src/index.ts"],
+  "entry": ["src/main.ts"],
   "splitting": true,
   "sourcemap": false,
   "clean": true,

@@ -95,6 +95,19 @@ console.log(`NODE_ENV is ... ${env.NODE_ENV}`);
 
 6. If you forget to add an environmental variable into the `.env` file which is specified within `envSchema` within `parseEnvVars.ts`, then `Zod` will throw an error at runtime
 
+### Obtaining the project's root directory
+
+Use the `getAbsRootDirAsync` asynchronous function from the `getRootDir.ts` file located in `src/utils/getRootDir.ts` to obtain the absolute path to the project root directory (the parent directory of the `package.json` file)
+
+```ts
+// Example of using getAbsRootDirAsync in a main.ts module
+import { getAbsRootDirAsync } from "./utils/getRootDir.js";
+
+console.log(
+  `Absolute path to project's root dir is ... ${await getAbsRootDirAsync()}`,
+); // Prints absolute path to project directory
+```
+
 ### Testing and Code Snippets
 
 A `_scratch` directory can be found in under the `src` directory which contains a `scratch.ts` file. This file and directory are intended to be a place to play around with code and code snippets, or run some quick tests without needing to pollute your main source code.

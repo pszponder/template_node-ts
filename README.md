@@ -56,6 +56,45 @@ All of your source code should go into the `src` directory
 
 When you build or start the application using one of the appropriate commands (see the scripts section), the transpiled code will be output to a `dist` folder.
 
+### Working with environmental variables
+
+1. Create a `.env` file in the root directory of the project (same directory as `package.json`)
+2. Add in any needed environmental variables in the `.env` file in the following format
+
+Example of `.env` file:
+
+```env
+# Example environmental variables
+NODE_ENV="development"
+USER="myUserName"
+PASSWORD="changeit123"
+PORT=1234
+```
+
+3. Make sure every variable in the `.env` file is accounted for in the `parseEnvVars.ts` file located under `src/utils/parseEnvVars.ts`
+4. In the `parseEnvVars.ts` file, add each environmental variable from the `.env` file into the `envSchema` object
+
+```ts
+// NOTE: Each object property will always have a value of z.string().min(1)
+const envSchema = z.object({
+  NODE_ENV: z.string().min(1),
+  USER: z.string().min(1),
+  PASSWORD: z.string().min(1),
+  PORT: z.string().min(1),
+});
+```
+
+5. Once you have the `.env` file and the `parseEnvVars.ts` file setup, to access your environmental files in a module, import `envVars` from `parseEnvVars.ts` and use dot-natation to access any of the environmental variables
+
+```ts
+// Example of accessing environmental variables from main.ts
+import { envVars as env } from "./utils/parseEnvVars.js";
+
+console.log(`NODE_ENV is ... ${env.NODE_ENV}`);
+```
+
+6. If you forget to add an environmental variable into the `.env` file which is specified within `envSchema` within `parseEnvVars.ts`, then `Zod` will throw an error at runtime
+
 ### Testing and Code Snippets
 
 A `_scratch` directory can be found in under the `src` directory which contains a `scratch.ts` file. This file and directory are intended to be a place to play around with code and code snippets, or run some quick tests without needing to pollute your main source code.

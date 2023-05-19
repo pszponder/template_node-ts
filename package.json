@@ -37,7 +37,7 @@
     "vitest": "^0.31.0"
   },
   "scripts": {
-    "clean": "rm -rf ./dist",
+    "clean": "rm -rf ./dist || true",
     "build": "pnpm clean && tsup --sourcemap",
     "build-prod": "pnpm clean && tsup --minify --dts",
     "start": "tsup --sourcemap --onSuccess \"node dist/main.js\"",

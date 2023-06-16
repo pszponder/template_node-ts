@@ -3,7 +3,7 @@ import { z } from "zod";
 
 // Define a schema for Environmental Variables in project root .env file
 const envSchema = z.object({
-  NODE_ENV: z.string().min(1),
+    NODE_ENV: z.string().min(1),
 });
 
 // Parse out the environmental variables using the envSchema

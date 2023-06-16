@@ -8,11 +8,11 @@ This setup is configured using [`pnpm`](https://pnpm.io/). If you would like to 
 
 ## Features:
 
-- Configured for use with [`pnpm`](https://pnpm.io/)
-- TypeScript support
-- Uses ESModule Syntax for module `import` and `export`
-- ESLint Configuration extended for use in TypeScript using Airbnb recommendations
-- Prettier Configuration for code formatting
+-   Configured for use with [`pnpm`](https://pnpm.io/)
+-   TypeScript support
+-   Uses ESModule Syntax for module `import` and `export`
+-   ESLint Configuration extended for use in TypeScript using Airbnb recommendations
+-   Prettier Configuration for code formatting
 
 ## Project Setup:
 
@@ -77,10 +77,10 @@ PORT=1234
 ```ts
 // NOTE: Each object property will always have a value of z.string().min(1)
 const envSchema = z.object({
-  NODE_ENV: z.string().min(1),
-  USER: z.string().min(1),
-  PASSWORD: z.string().min(1),
-  PORT: z.string().min(1),
+    NODE_ENV: z.string().min(1),
+    USER: z.string().min(1),
+    PASSWORD: z.string().min(1),
+    PORT: z.string().min(1),
 });
 ```
 
@@ -104,7 +104,7 @@ Use the `getAbsRootDirAsync` asynchronous function from the `getRootDir.ts` file
 import { getAbsRootDirAsync } from "./utils/getRootDir.js";
 
 console.log(
-  `Absolute path to project's root dir is ... ${await getAbsRootDirAsync()}`,
+    `Absolute path to project's root dir is ... ${await getAbsRootDirAsync()}`,
 ); // Prints absolute path to project directory
 ```
 
@@ -127,26 +127,26 @@ pnpm update
 Use the following command to run the scripts:
 `pnpm <script-name>`
 
-- `clean`: Deletes the `dist` directory and all of its contents
-- `build`: `Rebuilds` the `build` directory and its contents
-- `build-prod`: Same as `build` but output code is minified and bundled, also build d.ts type files
-- `start`: Builds the project and runs transpiled code from the `dist` directory
-- `watch`: Transpiles code and executes it in watch mode. Any changes to code will cause code to re-transpile and re-run.
-- `test`: Runs all `...spec.ts` and `...test.ts` files using `Vitest`
-- `test-related`: Pass in space-separated file paths to files in the `src` directory you wish to run tests for
-- `test-watch`: Runs `Vitest` in "watch" mode (changes to test files cause `Vitest` to rerun them)
-- `check-format`: Check for format errors in TS files in `src` directory
-- `check-lint`: Check for linting errors in TS files in `src` directory
-- `check-types`: Check for type errors in TS files in `src` directory
-- `check-all`: Check all TS files in `src` directory for errors (formatting, linting, or type errors)
-- `fix-format`: Fix all formatting errors in TS files in `src` directory
-- `fix-lint`: Fix all linting errors in TS files in `src` director
-- `fix-all`: Fix all formatting and linting errors & rebuild the project
-- `scratch`: Runs the transpiles and `scratch.ts` file located in the `src/_scratch` directory
+-   `clean`: Deletes the `dist` directory and all of its contents
+-   `build`: `Rebuilds` the `build` directory and its contents
+-   `build-prod`: Same as `build` but output code is minified and bundled, also build d.ts type files
+-   `start`: Builds the project and runs transpiled code from the `dist` directory
+-   `watch`: Transpiles code and executes it in watch mode. Any changes to code will cause code to re-transpile and re-run.
+-   `test`: Runs all `...spec.ts` and `...test.ts` files using `Vitest`
+-   `test-related`: Pass in space-separated file paths to files in the `src` directory you wish to run tests for
+-   `test-watch`: Runs `Vitest` in "watch" mode (changes to test files cause `Vitest` to rerun them)
+-   `check-format`: Check for format errors in TS files in `src` directory
+-   `check-lint`: Check for linting errors in TS files in `src` directory
+-   `check-types`: Check for type errors in TS files in `src` directory
+-   `check-all`: Check all TS files in `src` directory for errors (formatting, linting, or type errors)
+-   `fix-format`: Fix all formatting errors in TS files in `src` directory
+-   `fix-lint`: Fix all linting errors in TS files in `src` director
+-   `fix-all`: Fix all formatting and linting errors & rebuild the project
+-   `scratch`: Runs the transpiles and `scratch.ts` file located in the `src/_scratch` directory
 
 ## References:
 
-- [stemmlerjs/simple-typescript-starter](https://github.com/stemmlerjs/simple-typescript-starter)
-- [wesbos/eslint-config-wesbos](https://github.com/wesbos/eslint-config-wesbos)
-- [Matt Pocock - How to publish packages to npm in 2023](https://www.youtube.com/watch?v=eh89VE3Mk5g)
-- [Fireship - How to Setup Node.js with TypeScript in 2023](https://www.youtube.com/watch?v=H91aqUHn8sE)
+-   [stemmlerjs/simple-typescript-starter](https://github.com/stemmlerjs/simple-typescript-starter)
+-   [wesbos/eslint-config-wesbos](https://github.com/wesbos/eslint-config-wesbos)
+-   [Matt Pocock - How to publish packages to npm in 2023](https://www.youtube.com/watch?v=eh89VE3Mk5g)
+-   [Fireship - How to Setup Node.js with TypeScript in 2023](https://www.youtube.com/watch?v=H91aqUHn8sE)

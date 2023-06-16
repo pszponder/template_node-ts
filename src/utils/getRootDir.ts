@@ -14,7 +14,7 @@ import { fileURLToPath } from "url";
  * @returns boolean
  */
 async function fileExistsAsync(filePath: string) {
-  return !!(await stat(filePath).catch(e => false));
+    return !!(await stat(filePath).catch(e => false));
 }
 
 /**
@@ -22,14 +22,14 @@ async function fileExistsAsync(filePath: string) {
  * @returns Root Application Directory Path (same as location of "package.json" file)
  */
 export async function getAbsRootDirAsync() {
-  // Get the directory path of this file
-  const __filename = fileURLToPath(import.meta.url);
-  const __dirname = path.dirname(__filename);
-  let currentDir = __dirname;
+    // Get the directory path of this file
+    const __filename = fileURLToPath(import.meta.url);
+    const __dirname = path.dirname(__filename);
+    let currentDir = __dirname;
 
-  // Keep moving up directories until you find the package.json file (package.json file is always in root directory)
-  while (!(await fileExistsAsync(path.join(currentDir, "package.json")))) {
-    currentDir = path.join(currentDir, "..");
-  }
-  return currentDir;
+    // Keep moving up directories until you find the package.json file (package.json file is always in root directory)
+    while (!(await fileExistsAsync(path.join(currentDir, "package.json")))) {
+        currentDir = path.join(currentDir, "..");
+    }
+    return currentDir;
 }

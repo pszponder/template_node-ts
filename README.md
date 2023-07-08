@@ -122,6 +122,11 @@ To run the `scratch.ts` file, you can use the `pnpm scratch` command. This will 
 pnpm update
 ```
 
+```bash
+# Update packages but ignore version range specified in package.json
+pnpm update --latest
+```
+
 ## Scripts:
 
 Use the following command to run the scripts:

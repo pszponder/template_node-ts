@@ -135,6 +135,7 @@ Use the following command to run the scripts:
 -   `test`: Runs all `...spec.ts` and `...test.ts` files using `Vitest`
 -   `test-related`: Pass in space-separated file paths to files in the `src` directory you wish to run tests for
 -   `test-watch`: Runs `Vitest` in "watch" mode (changes to test files cause `Vitest` to rerun them)
+-   `test-coverage`: Runs test coverage against project
 -   `check-format`: Check for format errors in TS files in `src` directory
 -   `check-lint`: Check for linting errors in TS files in `src` directory
 -   `check-types`: Check for type errors in TS files in `src` directory

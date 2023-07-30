@@ -2,7 +2,7 @@ import { configDefaults, defineConfig } from "vitest/config";
 
 export default defineConfig({
     test: {
-        environment: "happy-dom",
+        environment: "node",
         reporters: "verbose",
         exclude: [
             ...configDefaults.exclude,

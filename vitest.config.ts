@@ -10,5 +10,8 @@ export default defineConfig({
             "build/**/*",
             "dist/**/*",
         ],
+        coverage: {
+            reporter: ["text"],
+        },
     },
 });

@@ -5,9 +5,9 @@
  * @returns {Promise<void>} A promise that resolves after the sleep duration
  */
 export async function sleep(ms: number) {
-    return new Promise<void>(resolve => {
-        setTimeout(resolve, ms);
-    });
+  return new Promise<void>(resolve => {
+    setTimeout(resolve, ms);
+  });
 }
 
 /**
@@ -17,9 +17,9 @@ export async function sleep(ms: number) {
  * @param {function(): Promise<void>} asyncCallback - Async callback to invoke after timeout completes
  */
 export async function invokeAfterDelayAsync(
-    delay: number,
-    asyncCallback: () => Promise<void>,
+  delay: number,
+  asyncCallback: () => Promise<void>,
 ) {
-    await sleep(delay * 1000);
-    await asyncCallback();
+  await sleep(delay * 1000);
+  await asyncCallback();
 }

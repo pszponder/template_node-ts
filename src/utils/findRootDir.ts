@@ -13,16 +13,16 @@ import { fileURLToPath } from "url";
  * @returns Root Application Directory Path (same as location of "package.json" file)
  */
 export async function getRootDir() {
-    // Get the directory path of this file
-    const __filename = fileURLToPath(import.meta.url);
-    const __dirname = path.dirname(__filename);
-    let currentDir = __dirname;
+  // Get the directory path of this file
+  const __filename = fileURLToPath(import.meta.url);
+  const __dirname = path.dirname(__filename);
+  let currentDir = __dirname;
 
-    // Keep moving up directories until you find the package.json file (package.json file is always in root directory)
-    while (!(await fileExists(path.join(currentDir, "package.json")))) {
-        currentDir = path.join(currentDir, "..");
-    }
-    return currentDir;
+  // Keep moving up directories until you find the package.json file (package.json file is always in root directory)
+  while (!(await fileExists(path.join(currentDir, "package.json")))) {
+    currentDir = path.join(currentDir, "..");
+  }
+  return currentDir;
 }
 
 /**
@@ -31,8 +31,8 @@ export async function getRootDir() {
  * @returns parent directory of the application directory path
  */
 export async function getRootDirParent() {
-    const rootDir = await getRootDir();
-    return path.join(rootDir, "..");
+  const rootDir = await getRootDir();
+  return path.join(rootDir, "..");
 }
 
 /**
@@ -41,9 +41,9 @@ export async function getRootDirParent() {
  * @returns boolean
  */
 async function fileExists(filePath: string) {
-    return !!(await stat(filePath).catch(() => false));
+  return !!(await stat(filePath).catch(() => false));
 }
 
 export const exportedForTesting = {
-    fileExists,
+  fileExists,
 };

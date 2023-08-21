@@ -1,47 +1,47 @@
 {
-    "root": true,
-    "parser": "@typescript-eslint/parser",
-    "plugins": ["@typescript-eslint", "vitest", "prettier"],
-    "parserOptions": {
-        "project": "./tsconfig.json",
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": "latest",
-        "sourceType": "module"
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "vitest", "prettier"],
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "extends": [
-        "airbnb-base",
-        "airbnb-typescript/base",
-        "plugin:import/typescript",
-        "plugin:prettier/recommended"
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "extends": [
+    "airbnb-base",
+    "airbnb-typescript/base",
+    "plugin:import/typescript",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    //"prettier/prettier": 2 // Means error
+    "no-console": 0,
+    "allowTemplateLiterals": 0,
+    "avoidEscape": 0,
+    "import/prefer-default-export": 0,
+    "no-redeclare": 0,
+    "@typescript-eslint/no-redeclare": 0,
+    "@typescript-eslint/naming-convention": [
+      "off",
+      { "leadingUnderscore": "allowSingleOrDouble" }
     ],
-    "rules": {
-        //"prettier/prettier": 2 // Means error
-        "no-console": 0,
-        "allowTemplateLiterals": 0,
-        "avoidEscape": 0,
-        "import/prefer-default-export": 0,
-        "no-redeclare": 0,
-        "@typescript-eslint/no-redeclare": 0,
-        "@typescript-eslint/naming-convention": [
-            "off",
-            { "leadingUnderscore": "allowSingleOrDouble" }
-        ],
-        "no-underscore-dangle": 0,
-        "@typescript-eslint/no-unused-vars": 1,
-        "no-await-in-loop": 1,
-        "prettier/prettier": [
-            "error",
-            {
-                "tabWidth": 4
-            }
-        ]
-    },
-    "env": {
-        "browser": true,
-        "node": true,
-        "es2022": true,
-        "jest": true
-    }
+    "no-underscore-dangle": 0,
+    "@typescript-eslint/no-unused-vars": 1,
+    "no-await-in-loop": 1,
+    "prettier/prettier": [
+      "error",
+      {
+        "tabWidth": 2
+      }
+    ]
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2022": true,
+    "jest": true
+  }
 }
